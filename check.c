@@ -11,13 +11,10 @@ int checkmagic(int num_array[]){
 	int i,r,c;
 	int magic = 1;
 
-
 	for (i = 0;i < N*N;i++)
 	{
-		if (sanity[num_array[i]] == 1|| num_array[i] > N*N){
-			printf("number: %d , in sanity: %d\n",num_array[i],sanity[num_array[i]]);
-			magic = 0;	}	
-
+		if (sanity[num_array[i]] == 1|| num_array[i] > N*N)
+			magic = 0;		
 
 		sanity[num_array[i]] = 1;
 		c = i% N;
@@ -40,11 +37,10 @@ int checkmagic(int num_array[]){
 
 	for (i = 0;i < 2*N+2;i++){
 		printf("index: %d, num: %d, magic: %d\n",i,sum_array[i],magic); 
-		magic = magic & (sum_array[1] == sum_array[i]);
+		magic = magic & (sum_array[0] == sum_array[i]);
 	}
 
-	printf("Is magic? %s\n", (magic)? "Yes" : "No");
-
-	return magic;
+	printf("Hello?\n");
+	return 1;
 
 }

@@ -37,6 +37,7 @@ int main(){
 		 
 	/* if no error , check num_array for magic*/
 	magic = checkmagic(num_array);
+	printf("am i reaching here?");
 
 	if(magic)
 		promptmatrix(num_array);
